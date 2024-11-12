@@ -1,22 +1,20 @@
 import { useState } from 'react'
 import UserLog from './components/UserLog'
-
+import MainComponent from './components/MainComponent'
 
 function App() {
-  const [jugar, setJugar] = useState(false)
-  const [mensaje, setMensaje] = useState('')
+  const [jugar, setJugar] = useState(false);
 
   
   return (
-
     <>
       {jugar ? (
-        <p>mensaje</p>
+        <MainComponent/>
       ):(
-        <UserLog jugar={jugar} setJugar= {setJugar}/>
+        <UserLog jugar={jugar} setJugar={setJugar}/>
       )}
     </>
   )
 }
 
-export default App
+export default App;
